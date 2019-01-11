@@ -102,7 +102,7 @@
     <color name="secondary_text_color">@color/dialtacts_secondary_text_color</color>
 
     <!-- Text color for section header. -->
-    <color name="section_header_text_color">@color/dialtacts_theme_color</color>
+    <color name="section_header_text_color">@color/primary_text_color</color>
 
     <!-- Color of the theme of the People app -->
     <color name="people_app_theme_color">#363636</color>

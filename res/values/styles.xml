@@ -166,6 +166,11 @@
         <!-- Popup menu -->
         <item name="android:popupMenuStyle">@style/PopupMenuStyleAppCompat</item>
         <item name="popupMenuStyle">@style/PopupMenuStyleAppCompat</item>
+        <item name="android:contextPopupMenuStyle">@style/PopupMenuStyleAppCompat</item>
+
+        <item name="android:fastScrollThumbDrawable">@drawable/thumb_drawable</item>
+        <item name="android:fastScrollTrackDrawable">@null</item>
+        <item name="android:fastScrollTextColor">@android:color/white</item>
     </style>
 
     <style name="PopupMenuStyle" parent="@android:style/Widget.PopupMenu">
