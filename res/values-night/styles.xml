@@ -87,16 +87,17 @@
         <item name="favorites_padding_bottom">0dip</item>
         <!-- Popup menu -->
         <item name="android:popupMenuStyle">@style/PopupMenuStyle</item>
+        <item name="android:popupTheme">@style/PopupMenuStyle</item>
+        <item name="android:contextPopupMenuStyle">@style/ContextPopupMenuStyle</item>
     </style>
 
     <style name="LaunchScreenTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <item name="android:windowBackground">@drawable/quantum_launchscreen_contacts</item>
-        <item name="colorPrimaryDark">@color/primary_color</item>
-        <item name="colorPrimary">@color/primary_color</item>
+        <item name="android:colorPrimary">@color/primary_color</item>
+        <item name="android:colorPrimaryDark">@color/primary_color</item>
     </style>
 
     <style name="PeopleActivityTheme" parent="@style/PeopleThemeAppCompat">
-        <item name="android:forceDarkAllowed">true</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:listSelector">?android:attr/listChoiceBackgroundIndicator</item>
@@ -165,13 +166,20 @@
         <!-- Popup menu -->
         <item name="android:popupMenuStyle">@style/PopupMenuStyleAppCompat</item>
         <item name="popupMenuStyle">@style/PopupMenuStyleAppCompat</item>
+        <item name="android:contextPopupMenuStyle">@style/PopupMenuStyleAppCompat</item>
+
+        <item name="android:fastScrollThumbDrawable">@drawable/thumb_drawable</item>
+        <item name="android:fastScrollTrackDrawable">@null</item>
+        <item name="android:fastScrollTextColor">@android:color/white</item>
     </style>
 
-    <style name="PopupMenuStyle" parent="@android:style/Widget.PopupMenu">
-        <item name="android:popupBackground">@android:color/white</item>
+    <style name="PopupMenuStyle" parent="@android:style/Theme.DeviceDefault.Dialog">
     </style>
 
-    <style name="PopupMenuStyleAppCompat" parent="Widget.AppCompat.PopupMenu">
+    <style name="PopupMenuStyleAppCompat" parent="@android:style/Theme.DeviceDefault.Dialog">
+    </style>
+
+    <style name="ContextPopupMenuStyle" parent="@android:style/Widget.PopupMenu">
         <item name="android:popupBackground">@android:color/white</item>
     </style>
 
@@ -222,6 +230,7 @@
         <!-- Styles that require AppCompat compatibility, remember to update both sets -->
         <item name="android:titleTextAppearance">@style/ContactsActionBarTitleTextAppCompat</item>
         <item name="titleTextAppearance">@style/ContactsActionBarTitleTextAppCompat</item>
+        <item name="popupTheme">@style/PopupMenuStyleAppCompat</item>
     </style>
 
     <style name="LightToolbarNavigationButtonStyle" parent="@style/Widget.AppCompat.Toolbar.Button.Navigation">
@@ -282,14 +291,14 @@
     <style name="NonPhoneActivityTheme" parent="@android:Theme.Translucent.NoTitleBar">
     </style>
 
-    <style name="NonPhoneDialogTheme" parent="@android:Theme.Material.Light.Dialog">
+    <style name="NonPhoneDialogTheme" parent="@android:Theme.DeviceDefault.Dialog">
     </style>
 
-    <style name="ConfirmAddDetailDialogTheme" parent="@android:style/Theme.Material.Light.Dialog.MinWidth">
+    <style name="ConfirmAddDetailDialogTheme" parent="@android:style/Theme.DeviceDefault.Dialog.MinWidth">
         <item name="android:windowCloseOnTouchOutside">true</item>
     </style>
 
-    <style name="ContactEditorAccountsChangedActivityTheme" parent="@android:style/Theme.Material.Light.Dialog.NoActionBar.MinWidth">
+    <style name="ContactEditorAccountsChangedActivityTheme" parent="@android:style/Theme.DeviceDefault.Dialog.NoActionBar.MinWidth">
         <item name="android:windowCloseOnTouchOutside">true</item>
         <item name="android:textColorPrimary">@color/primary_text_color</item>
         <item name="android:textColorSecondary">@color/secondary_text_color</item>
@@ -297,8 +306,8 @@
         <item name="android:colorAccent">@color/primary_color</item>
     </style>
 
-    <style name="SelectableItem" parent="@android:style/Theme.Material.Light">
-        <item name="android:background">?android:attr/selectableItemBackground</item>
+    <style name="SelectableItem" parent="@android:style/Theme.DeviceDefault">
+        <item name="android:background">@color/background_primary</item>
     </style>
 
     <style name="ExpandingEntryCardStyle">
@@ -336,8 +345,9 @@
 
     <!-- Inherit from Theme.Material.Light.Dialog instead of Theme.Material.Light.Dialog.Alert
         since the Alert dialog is private. They are identical anyway. -->
-    <style name="ContactsAlertDialogTheme" parent="@android:style/Theme.Material.Light.Dialog">
+    <style name="ContactsAlertDialogTheme" parent="@android:style/Theme.DeviceDefault.Dialog">
         <item name="android:colorAccent">@color/primary_color</item>
+        <item name="android:background">@color/background_primary</item>
     </style>
 
     <style name="ContactsAlertDialogThemeAppCompat" parent="Theme.AppCompat.Light.Dialog.MinWidth">
@@ -348,7 +358,7 @@
     <style name="EditKindIconStyle">
         <item name="android:layout_width">24dp</item>
         <item name="android:layout_height">24dp</item>
-        <item name="android:tint">@color/editor_icon_color</item>
+        <item name="android:tint">@color/dialtacts_secondary_text_color</item>
         <item name="android:layout_marginStart">16dp</item>
         <!-- We want 32dp of padding between these icon's and EditText's. Since EditText's have
             4dp of starting padding built in, we set this as 28dp. -->
@@ -451,8 +461,9 @@ background and text color. See also android:style/Widget.Holo.TextView.ListSepar
         <item name="android:textColor">#737373</item>
     </style>
 
-    <style name="ListViewStyle" parent="@android:style/Widget.Material.Light.ListView">
+    <style name="ListViewStyle" parent="@android:style/Widget.Material.ListView">
         <item name="android:overScrollMode">always</item>
+        <item name="android:background">@color/background_primary</item>
     </style>
 
     <!-- Adding padding to action button doesn't move it to left, we increase the button width to
@@ -467,7 +478,7 @@ background and text color. See also android:style/Widget.Holo.TextView.ListSepar
         <item name="android:layout_height">match_parent</item>
     </style>
 
-    <style name="BackgroundOnlyTheme" parent="@android:style/Theme.Material.Light">
+    <style name="BackgroundOnlyTheme" parent="@android:style/Theme.DeviceDefault">
         <item name="android:windowBackground">@null</item>
         <item name="android:windowContentOverlay">@null</item>
         <item name="android:windowAnimationStyle">@null</item>
@@ -478,7 +489,7 @@ background and text color. See also android:style/Widget.Holo.TextView.ListSepar
         <item name="android:windowIsFloating">true</item>
     </style>
 
-    <style name="Theme.CallSubjectDialogTheme" parent="@android:style/Theme.Material.Light.Dialog">
+    <style name="Theme.CallSubjectDialogTheme" parent="@android:style/Theme.DeviceDefault.Dialog">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
 
@@ -592,14 +603,5 @@ background and text color. See also android:style/Widget.Holo.TextView.ListSepar
     <style name="DrawerHeaderItemStyle">
         <item name="android:paddingStart">@dimen/drawer_side_padding</item>
         <item name="android:paddingEnd">@dimen/drawer_label_header_end_padding</item>
-    </style>
-
-    <style name="DrawerSecondLineTitleTextStyle" parent="DrawerItemTextStyle">
-        <item name="android:layout_width">match_parent</item>
-    </style>
-
-    <style name="DrawerSecondLineSummaryTextStyle" parent="DrawerItemTextStyle">
-        <item name="android:textColor">@color/quantum_black_secondary_text</item>
-        <item name="android:layout_width">match_parent</item>
     </style>
 </resources>
