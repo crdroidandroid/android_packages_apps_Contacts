@@ -188,8 +188,8 @@ public class MaterialColorMapUtils {
         final boolean isGroupView = activity instanceof PeopleActivity
                 && ((PeopleActivity) activity).isGroupView();
         return isGroupView
-                ? ContextCompat.getColor(activity, R.color.group_primary_color_dark)
-                : ContextCompat.getColor(activity, R.color.primary_color_dark);
+                ? ContextCompat.getColor(activity, R.color.group_primary_color)
+                : ContextCompat.getColor(activity, R.color.primary_color);
     }
 
     /**
