@@ -180,7 +180,7 @@
     </style>
 
     <style name="ContextPopupMenuStyle" parent="@android:style/Widget.PopupMenu">
-        <item name="android:popupBackground">@android:color/white</item>
+        <item name="android:popupBackground">@color/alert_background</item>
     </style>
 
     <style name="ContactsActionButtonStyle" parent="Widget.AppCompat.ActionButton">
