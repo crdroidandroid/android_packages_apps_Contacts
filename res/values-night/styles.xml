@@ -350,9 +350,10 @@
         <item name="android:background">@color/background_primary</item>
     </style>
 
-    <style name="ContactsAlertDialogThemeAppCompat" parent="Theme.AppCompat.Light.Dialog.MinWidth">
+    <style name="ContactsAlertDialogThemeAppCompat" parent="Theme.AppCompat.Dialog.MinWidth">
         <item name="android:colorAccent">@color/primary_color</item>
         <item name="colorAccent">@color/primary_color</item>
+        <item name="android:background">@color/background_primary</item>
     </style>
 
     <style name="EditKindIconStyle">
