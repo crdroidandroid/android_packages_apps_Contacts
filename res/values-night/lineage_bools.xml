@@ -15,6 +15,6 @@
      limitations under the License.
 -->
 <resources>
-    <color name="navigation_bar_bg">@color/background_primary</color>
-    <color name="navigation_bar_divider">@*android:color/transparent</color>
+
+    <bool name="light_navigation_bar">false</bool>
 </resources>

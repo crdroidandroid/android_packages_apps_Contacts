@@ -51,7 +51,7 @@
         <item name="android:popupMenuStyle">@style/PopupMenuStyle</item>
         <item name="android:navigationBarColor">@color/navigation_bar_bg</item>
         <item name="android:navigationBarDividerColor">@color/navigation_bar_divider</item>
-        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowLightNavigationBar">@bool/light_navigation_bar</item>
     </style>
 
     <style name="PeopleThemeAppCompat" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -120,7 +120,7 @@
         <item name="popupMenuStyle">@style/PopupMenuStyleAppCompat</item>
         <item name="android:navigationBarColor">@color/navigation_bar_bg</item>
         <item name="android:navigationBarDividerColor">@color/navigation_bar_divider</item>
-        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowLightNavigationBar">@bool/light_navigation_bar</item>
     </style>
 
 </resources>
